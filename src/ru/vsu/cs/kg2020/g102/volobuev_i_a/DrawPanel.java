@@ -11,6 +11,10 @@ public class DrawPanel extends JPanel {
         gr.setColor(Color.white);
         gr.fillRect(0, 0, 1200, 800);
         gr.setColor(Color.black);
+        Enter(gr,465,600,50,200,5);
+        gr.setColor(Color.green);
+        gr.fillRect(0,700,1200,100);
+        gr.setColor(Color.black);
         gr.drawRect(100, 600, 1000, 100);
         gr.drawRect(200, 450, 300, 150);
         gr.drawRect(700, 450, 300, 150);
@@ -33,8 +37,16 @@ public class DrawPanel extends JPanel {
         gr.fillPolygon(r2);
         gr.setColor(Color.black);
         gr.drawRect(500, 200, 200, 400);
+        Wind(gr,210, 455,30, 40,3,7);
+        Wind(gr,710, 455,30, 40,3,7);
     }
-
+    public void Enter(Graphics2D g, int x, int y, int w, int h, int n){
+        for(int i = 0; i < n; i++){
+            g.setColor(Color.gray);
+            g.fillOval(x+i*w+5*i,y,w,h);
+            g.setColor(Color.black);
+        }
+    }
     public void Wind(Graphics2D g, int x, int y, int w, int h, int f, int n) {
         for (int i = 0; i < f; i++) {
             for (int j = 0; j < n; j++) {
