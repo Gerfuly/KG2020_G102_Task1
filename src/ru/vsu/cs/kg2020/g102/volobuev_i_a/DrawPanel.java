@@ -48,11 +48,13 @@ public class DrawPanel extends JPanel {
         }
     }
     public void Wind(Graphics2D g, int x, int y, int w, int h, int f, int n) {
+        g.setColor(Color.blue);
         for (int i = 0; i < f; i++) {
             for (int j = 0; j < n; j++) {
-                g.drawRect((x + 10) + w * j + 8 * j, (y + 5) + h * i + 3 * i, w, h);
+                g.fillRect((x + 10) + w * j + 8 * j, (y + 5) + h * i + 3 * i, w, h);
             }
         }
+        g.setColor(Color.black);
     }
 
     public void Ruf(Graphics2D g, int x, int y, int w, int h, int n) {
