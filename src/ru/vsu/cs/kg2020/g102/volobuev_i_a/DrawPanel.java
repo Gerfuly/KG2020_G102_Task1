@@ -11,10 +11,13 @@ public class DrawPanel extends JPanel {
         Graphics2D gr = (Graphics2D) g;
         //gr.setColor(Color.cyan);
         //gr.fillRect(0, 0, 1200, 800);
-        Enter(gr, 465, 600, 50, 200, 5);
+
         DrawAll dr = new DrawAll();
         dr.Always(gr);
         Build(gr);
+        Enter(gr, 465, 600, 50, 200, 5);
+        gr.setColor(Color.green);
+        gr.fillRect(0, 700, 1200, 100);
         //gr.setColor(Color.green);
         //gr.fillRect(0, 700, 1200, 100);
         Wind(gr, 500, 200, 30, 40, 9, 5);
