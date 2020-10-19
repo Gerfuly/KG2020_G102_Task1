@@ -3,20 +3,23 @@ package ru.vsu.cs.kg2020.g102.volobuev_i_a;
 import javax.swing.*;
 import java.awt.*;
 
+
 public class DrawPanel extends JPanel {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
         Graphics2D gr = (Graphics2D) g;
-        gr.setColor(Color.cyan);
-        gr.fillRect(0, 0, 1200, 800);
-        Build(gr);
+        //gr.setColor(Color.cyan);
+        //gr.fillRect(0, 0, 1200, 800);
         Enter(gr, 465, 600, 50, 200, 5);
-        gr.setColor(Color.green);
-        gr.fillRect(0, 700, 1200, 100);
+        DrawAll dr = new DrawAll();
+        dr.Always(gr);
+        Build(gr);
+        //gr.setColor(Color.green);
+        //gr.fillRect(0, 700, 1200, 100);
         Wind(gr, 500, 200, 30, 40, 9, 5);
-
         Ruf(gr, 517, 0, 150, 100, 5);
+        /*
         gr.setColor(Color.getHSBColor(22, 30, 64));
         Polygon r1 = new Polygon();
         r1.addPoint(200, 450);
@@ -30,6 +33,7 @@ public class DrawPanel extends JPanel {
         r2.addPoint(900, 400);
         r2.addPoint(1000, 450);
         gr.fillPolygon(r2);
+        */
         Wind(gr, 210, 455, 30, 40, 3, 7);
         Wind(gr, 710, 455, 30, 40, 3, 7);
         Sun(gr, 1000, 100, 50, 100, 50);
@@ -38,6 +42,7 @@ public class DrawPanel extends JPanel {
         Cloud(gr,150,200,4);
         Cloud(gr,50,100,7);
         Cloud(gr,100,300,2);
+
     }
 
     public void Sun(Graphics2D g, int x, int y, int r, int R, int n) {
