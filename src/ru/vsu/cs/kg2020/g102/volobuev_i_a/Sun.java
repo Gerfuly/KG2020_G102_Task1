@@ -3,8 +3,22 @@ package ru.vsu.cs.kg2020.g102.volobuev_i_a;
 import javax.swing.*;
 import java.awt.*;
 
-public class Sun extends JFrame {
-    public void Sun1(Graphics2D g, int x, int y, int r, int R, int n) {
+public class Sun {
+    int x, y, r, R, n;
+
+    void move(int dx) {
+        x += dx;
+    }
+
+    public Sun(int x, int y, int r, int r1, int n) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        R = r1;
+        this.n = n;
+    }
+
+    public void draw(Graphics2D g) {
         double da = Math.PI * 2 / n;
         g.setColor(Color.yellow);
         g.fillOval(x - r, y - r, 2 * r, 2 * r);
